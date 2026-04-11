@@ -1063,5 +1063,33 @@ body {
 }
 
 
+/* --- UNIVERSAL FIX --- */
 
+/* Siguraduhin na magkatabi ang text at image */
+section#about .container, 
+.about-content { 
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; 
+    align-items: center;
+    gap: 30px;
+}
+
+/* Hover effect at Pointer para sa Graduation Photo */
+#myImg {
+    cursor: pointer !important;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    z-index: 10;
+    position: relative;
+}
+
+#myImg:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Modal fix para laging nasa harap */
+.modal {
+    z-index: 9999 !important;
+}
 
