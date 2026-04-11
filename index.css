@@ -477,19 +477,52 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-normal);
 }
 
+/* I-target natin yung icon mismo */
 .work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
+    width: 30px; /* O kung anong size ang gusto mo */
+    transition: .3s;
+    filter: brightness(0.7); /* Medyo madilim siya sa simula */
+    cursor: pointer;
 }
 
+/* Eto yung "maliwanag" at hover effect */
 .work__code:hover {
-    transform: scale(1.2);
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+    transform: scale(1.1) translateY(-2px);
+}
+
+/* Kung gusto mo yung buong link ang may effect */
+.github-link {
+    display: inline-block; /* Importante ito para gumana ang transform */
+    transition: .3s;
 }
 
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+}
+/* 1. Ang buong box ang gagalaw natin */
+.work__image-box {
+    position: relative;
+    border-radius: .5rem;
+    display: block;
+    cursor: pointer;
+    /* Smooth transition para sa buong box */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important;
+}
+
+/* 2. Ang picture sa loob ay susunod lang, hindi siya mag-o-overflow */
+.work__image {
+    width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: .5rem;
+}
+
+/* 3. Hover Effect: Ang BUONG BOX ang lalaki ng kaunti */
+.work__image-box:hover {
+    transform: scale(1.05) !important; /* Lalaki ang buong box ng 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Optional: Dagdag shadow para mukhang umaangat */
+    z-index: 10; /* Para siguradong nasa ibabaw siya ng ibang elements */
 }
 
 @media(min-width: 901px) {
@@ -497,6 +530,7 @@ body:not(.user-is-tabbing) a:focus {
         flex: 1;
         margin: 0 0 0 10rem;
     }
+
 }
 
 @media(max-width: 900px) {
@@ -509,15 +543,41 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Clients ----- */
 /* --------------------------------------- */
 
+/* 1. Container: Dito ang position. Safe na 'to. */
 .client__logos {
     display: flex;
     justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
+    align-items: center;
+    width: 100%;
+    /* WALA na dapat filter dito para hindi mawala ang logos */
+}
+
+/* 2. Individual Logo: Dito natin ilalagay ang "Look" nila */
+.client__logo {
+    width: 80px; 
+    height: auto;
+    /* Imbes na invert, grayscale lang gamitin natin para hindi "mawala" yung ChatGPT */
+    filter: grayscale(100%); 
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+/* 3. Hover: Dito lalabas ang kulay */
+.client__logo:hover {
+    filter: grayscale(0%) !important; /* Babalik ang original colors */
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .client__logo {
     height: 6.5rem;
     max-width: 18rem;
+    width: 60px; /* I-adjust mo ang laki */
+    height: auto;
+    filter: grayscale(1); /* Gagawin silang black and white */
+    opacity: 0.7;        /* Medyo dimmed */
+    transition: 0.3s;    /* Smooth movement */
 }
 
 @media(max-width: 1240px) {
@@ -611,3 +671,397 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
+
+.work__list {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;      
+  list-style: none; 
+  padding: 0;
+  margin-top: 15px;
+}
+
+.work__list li {
+  background-color: #ff4d61; 
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.work__links {
+  display: flex;
+  align-items: center;
+  gap: 25px;         
+  margin-top: 30px;
+}
+
+.work__links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+
+.work__code {
+  width: 50px;
+  height: 50px;
+  filter: invert(1); 
+  transition: 0.3s;
+}
+
+.work__code:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.work__code {
+  filter: invert(1);
+  width: 35px;       
+  height: 35px;
+  transition: 0.3s;
+  opacity: 0.8;     
+}
+
+
+.work__code:hover {
+  opacity: 5;        
+  transform: scale(1.1); 
+}
+
+.section__title {
+    position: relative; /* Kailangan ito para sa line */
+    display: inline-block;
+    margin-bottom: 3rem; /* Dagdagan natin ang space sa ilalim */
+    padding-bottom: 10px;
+}
+
+/* Ito yung mismong pulang linya */
+.section__title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;      /* Haba ng linya */
+    height: 3px;      /* Kapal ng linya */
+    background-color: #ff4b4b; /* Pulang kulay */
+}
+
+.clients__logo img {
+    width: 60px; /* I-adjust mo ang laki */
+    height: auto;
+    filter: grayscale(1); /* Gagawin silang black and white */
+    opacity: 0.7;        /* Medyo dimmed */
+    transition: 0.3s;    /* Smooth movement */
+}
+
+/* Kapag tinapatan ng mouse, babalik ang original na kulay at tatalon ng konti */
+.clients__logo img:hover {
+    filter: grayscale(0); /* Balik kulay */
+    opacity: 1;           /* Fully visible */
+    transform: translateY(-5px); /* Tatalon ng konti (parang bouncy) */
+}
+
+
+
+
+
+.dashboard-wrapper {
+    position: relative; /* Kailangan ito para sa absolute positioning */
+    display: inline-block;
+}
+
+.dashboard-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.hover-area {
+    position: absolute;
+    /* Magsimula tayong walang hover effect */
+    background: transparent;
+    cursor: help; /* Papalitan ang cursor para alam nilang may tooltip */
+}
+
+/* Position para sa Doughnut Chart area (Size Popularity Breakdown) */
+/* I-adjust mo itong top/left/width/height para sumakto sa picture mo */
+.size-popularity {
+    top: 55%;    /* Gaano kababa mula sa taas */
+    left: 42%;   /* Gaano kalayo mula sa kaliwa */
+    width: 25%;  /* Gaano kalawak yung chart area */
+    height: 38%; /* Gaano kataas yung chart area */
+}
+
+/* Itatago muna natin ang label */
+.hover-label {
+    display: none;
+    position: absolute;
+    bottom: 110%; /* Lilitaw sa itaas ng chart area */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Wag mag-wrap ng text */
+    font-size: 0.8rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+/* Kapag tinapatan ng mouse ang chart area */
+.hover-area:hover .hover-label {
+    display: block;
+}
+
+/* Black Background Overlay */
+
+
+
+
+
+
+
+
+
+
+
+/* I-force natin na lumitaw ito sa pinaka-ibabaw */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 99999 !important; /* Sobrang taas para hindi matakpan */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9) !important;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 85%;
+    max-width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #ff4b4b; /* Konting border para highlight */
+}
+
+/* Container layout */
+.certs__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-top: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Individual Card */
+.cert__card {
+  background: #151515; /* Dark pero lilitaw yung content */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert__card:hover {
+  transform: translateY(-10px);
+  background: #1a1a1a;
+  border: 1px solid #ff4b4b; /* O kahit anong theme color mo */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 
+              0 0 15px rgba(255, 75, 75, 0.2); /* Glow effect */
+}
+
+/* Image styling */
+.cert__img-box {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cert__img {
+  width: 100%;
+  display: block;
+  transition: 0.5s;
+  filter: brightness(0.8);
+}
+
+.cert__card:hover .cert__img {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* Hover overlay text */
+.cert__hover {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.cert__card:hover .cert__hover {
+  opacity: 1;
+}
+
+.cert__hover span {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Text info area */
+.cert__info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.cert__info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.cert__info p {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.cert__link {
+  color: #ff4b4b; /* Baguhin mo kung ibang kulay trip mo */
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cert__link:hover {
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+}
+
+body {
+    /* Mula sa dating 0.7, gawin nating 0.4 para lumitaw ang detalye ng bundok */
+    background-image: linear-gradient(rgba(19, 17, 17, 0.4), rgba(0, 0, 0, 0.4)), 
+                      url('./images/header.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Container setup para magkatabi sila */
+.about__content {
+    display: flex;
+    align-items: center;    /* Center vertically para pantay ang text sa photo */
+    justify-content: flex-start; 
+    gap: 50px;              /* Space sa pagitan ng picture at text */
+    margin-top: 3rem;
+}
+
+/* Photo Box Setup */
+.about__photo-container {
+    flex: 0 0 300px;        /* Fix width: hindi liliit, hindi lalaki */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.4s ease; /* Para sa smooth highlight */
+}
+
+/* HIGHLIGHT EFFECT: Kapag nidaanan ng cursor */
+.about__photo-container:hover {
+    transform: translateY(-10px); /* Tatalon nang kaunti pataas */
+    box-shadow: 0 20px 40px rgba(0, 163, 224, 0.4); /* Blue glow effect */
+}
+
+.about__photo {
+    width: 100% !important; /* Siguraduhing sasakop siya sa buong 450px */
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Highlight sa mismong picture */
+.about__photo-container:hover .about__photo {
+    transform: scale(1.1); /* Zoom effect */
+    filter: brightness(1.2); /* Magliliwanag ang picture */
+}
+
+/* Overlay Text (JC Dalangin) */
+.about__photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    opacity: 0; /* Nakatago sa simula */
+    transition: opacity 0.4s ease;
+}
+
+/* Lalabas ang pangalan kapag nag-hover */
+.about__photo-container:hover .about__photo-overlay {
+    opacity: 1;
+}
+
+/* Text Side Styling */
+.about__text {
+    flex: 1; /* Kunin ang natitirang space */
+}
+
+.about__text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Responsive para sa Mobile */
+@media (max-width: 768px) {
+    .about__content {
+        flex-direction: column; /* Magpapatong sila sa phone */
+        text-align: center;
+    }
+    .about__photo-container {
+    /* Pilitin nating lakihan */
+    flex: 0 0 450px !important;  /* Itong 450px ang magdidikta ng laki */
+    max-width: 450px !important; 
+    
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+}
+
+.about__text p {
+    font-size: 2.1rem;
+    line-height: 1.7; /* Para relax lang basahin */
+    text-align: justify;
+    color: #f0f0f0;
+}
+
+
+
+

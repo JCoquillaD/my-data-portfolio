@@ -41,3 +41,18 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+
+
+function openModal(element) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    
+    modal.style.display = "block";
+    modalImg.src = element.src;
+}
+
+// Isara ang modal pag clinick ang background
+document.getElementById("myModal").onclick = function() {
+    this.style.display = "none";
+}

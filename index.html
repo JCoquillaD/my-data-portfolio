@@ -1,19 +1,3 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,13 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
   <title>
-    Jemico "Jc" Dalangin | Aspiring Data Analyst
+    Jemico "JC" Dalangin | Aspiring Data Analyst
   </title>
 
   <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Power BI, DAX, SQL, Data Analytics," />
   <link rel="stylesheet" href="index.css" />
 </head>
@@ -36,34 +18,48 @@
 <body>
 
   <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
+  <header class="header" role="banner" id="top" style="height: auto; min-height: auto; padding-bottom: 2rem;">
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
+          <li class="nav__item"> <a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#certificate" class="nav__link">Certificates</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Tools</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Jemico "Jc" Dalangin</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>Aspiring Data Analyst based in Philippines.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+</header>
+
+
+<section class="about" id="about">
+    <div class="row">
+      <h2>About Me</h2>
+      <div class="about__content">
+        
+        <div class="about__photo-container">
+            <img class="about__photo" src="./images/MIKOOOO.png" alt="JC Dalangin" />
+            <div class="about__photo-overlay">
+                <span class="name">JC Dalangin</span>
+                <span class="role">Aspiring Data Analyst</span>
+            </div>
+        </div>
+
+        <div class="about__text">
+          <p>
+                I am an IT graduate and an aspiring Data Analyst passionate about uncovering actionable insights within complex datasets. 
+                With expertise in Power BI, SQL, and Excel, I specialize in transforming raw data into clear, visual narratives that drive smarter business decisions. 
+                I thrive at the intersection of technology and strategy, always aiming to help organizations leverage their data for maximum efficiency and impact.
+
+          </p>
+          <a href="./Resume/JemicoDalangin_MyResume.pdf" class="btn">My Resume</a>
+        </div>
+
       </div>
     </div>
-  </header>
+  </section>
+
 
   <main role="main">
 
@@ -78,131 +74,196 @@
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
-
+               <h3>The Pizza Hub: Sales & Trends Tracker</h3>
+                    <p>
+                      A comprehensive sales dashboard that tracks daily trends, peak hours, and best-selling products. 
+                      Used this to identify operational bottlenecks and revenue growth opportunities.
+                    </p>
+                      <ul class="work__list">
+                        <li>Power BI</li>
+                        <li>DAX Formulas</li>
+                        <li>Data Cleaning</li>
+                        <li>Sales Forecasting</li>
+                      </ul>
+              <br>
               <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGE3ZDliNjQtMjZjZC00MzkwLTg4MWYtYjhhYmQxZTk5OThmIiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">
+                  Visit Site &rarr;
                 </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                <a href="https://github.com/JCoquillaD/Pizza_Sales_Revenue_Analysis" target="_blank" class="github-link">
+                  <img src="./images/github.svg" alt="GitHub" class="work__code">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
+              <img src="./images/Pizza_Sales_Revenue_Analysis.png" 
+                  class="work__image" 
+                  alt="Project 1" 
+                  onclick="openModal(this)" /> 
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
+               <h3>Plant_DTS: Global Sales & Profitability Analysisr</h3>
+                    <p>
+                      End-to-end Power BI sales analytics solution featuring dynamic metric switching (Sales, Qty, GP) via DAX, 
+                      time intelligence for YOY performance tracking, and automated data cleaning for regional profitability insights.
+                    </p>
+                      <ul class="work__list">
+                        <li>Power BI</li>
+                        <li>DAX Formulas</li>
+                        <li>Data Cleaning</li>
+                        <li>Sales Forecasting</li>
+                        <li>business-intelligence executive-dashboard</li>
+                      </ul>
+              <br>
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYWQxOTM3MGUtYmU5ZS00NGNhLWJhMTMtMmYzNWYyNzQyNjI5IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">
+                  Visit Site &rarr;
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                <a href="https://github.com/JCoquillaD/PLANT_DTS-Global-Sales-Profitability-Performance?tab=readme-ov-file" target="_blank" class="github-link">
+                  <img src="./images/github.svg" alt="GitHub" class="work__code">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
+              <img src="./images/Plant_Co. Sales Performance 2023.png" 
+                  class="work__image" 
+                  alt="Project 1" 
+                  onclick="openModal(this)" /> 
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Notificator</h3>
+              <h3>Maven Coffee Operational Analysis</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                An operational dashboard designed to track transaction patterns, identify peak hours, 
+                and analyze product category performance. Used heat maps and time-series analysis 
+                to provide actionable insights for staff scheduling and inventory management.
               </p>
               <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
+                <li>Power BI</li>
+                <li>Data Modeling</li>
+                <li>Time-Series Analysis</li>
+                <li>Heat Map Design</li>
               </ul>
 
               <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiNjViZDNmMGQtNjhjNi00NmE3LThlNzgtMzM3ZWNhOTQ3ZTE5IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">Visit Site &rarr;</a>
+                
+                <a href="https://github.com/JCoquillaD/Coffee_Operations_Analysis_Report?tab=readme-ov-file" target="_blank" class="github-link">
+                  <img src="./images/github.svg" alt="GitHub" class="work__code">
                 </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+            </div>
+          </div>
+                <div class="work__image-box">
+              <img src="./images/Coffee_Operations_Analysis_Report.png" 
+                  class="work__image" 
+                  alt="Project 1" 
+                  onclick="openModal(this)" /> 
+            </div>
+              </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Global Video Game Market Trends</h3>
+              <p>
+                An executive-level dashboard analyzing gaming trends from 1980 to 2015+. 
+                It features advanced DAX measures to track industry growth, a pop-out slicer menu 
+                for seamless navigation, and hierarchy filtering by Decade, Genre, and Console.
+              </p>
+              <ul class="work__list">
+                <li>Power BI</li>
+                <li>Advanced DAX</li>
+                <li>Market Trend Analysis</li>
+                <li>UI/UX Dashboard Design</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiMjM4ZDM1NDItNWIxNC00Mzc1LTk4OWEtN2I1Y2ZjZWQ4MGVkIiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">Visit Site &rarr;</a>
+                <a href="https://github.com/JCoquillaD/Global_Video_Game_Market_Trends?tab=readme-ov-file" target="_blank" class="github-link">
+                  <img src="./images/github.svg" alt="GitHub" class="work__code">
                 </a>
               </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
+              <div class="work__image-box">
+              <img src="./images/Global_Video_Game_Market_Trends.png" 
+                  class="work__image" 
+                  alt="Project 1" 
+                  onclick="openModal(this)" /> 
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ***** Clients ***** -->
+  <section class="certs section" id="certificate">
+  <div class="row">
+        <h2>Certificates</h2> <div class="certs__container container grid">
+          <div class="cert__card">
+            <div class="cert__img-box">
+              <img src="./images/CertificateExcel.png" alt="Preparing Data with Excel Cert" class="cert__img" onclick="openModal(this)">
+              <div class="cert__hover">
+                <span>View Certificate</span>
+              </div>
+            </div>
+            <div class="cert__info">
+              <h3>Preparing Data for Analysis with Microsoft Excel</h3>
+              <p>Microsoft | Coursera | Authorized Issuer</p>
+              <p class="cert__date">Issued: Aug 27, 2025</p>
+              <a href="https://coursera.org/share/8aee10e1ca5b108cdad5da2c475b47ea" target="_blank" class="cert__link">Verify Credential →</a>
+            </div>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__img-box">
+              <img src="./images/HarnessingPowerBI.png" alt="Harnessing Data with Power BI Cert" class="cert__img" onclick="openModal(this)">
+              <div class="cert__hover">
+                <span>View Certificate</span>
+              </div>
+            </div>
+            <div class="cert__info">
+              <h3>Harnessing the Power of Data with Power BI</h3>
+              <p>Microsoft | Coursera | Authorized Issuer</p>
+              <p class="cert__date">Issued: Oct 9, 2025</p>
+              <a href="https://coursera.org/share/8b499381964b6774fa26ab8b5ccdb96b" target="_blank" class="cert__link">Verify Credential →</a>
+            </div>
+          </div>
+
+          <div class="cert__card">
+            <div class="cert__img-box">
+              <img src="./images/ETLPowerBI.png" alt="ETL Data with Power BI Cert" class="cert__img" onclick="openModal(this)">
+              <div class="cert__hover">
+                <span>View Certificate</span>
+              </div>
+            </div>
+            <div class="cert__info">
+              <h3>Extract, Transform and Load Data in Power BI</h3>
+              <p>Microsoft | Coursera | Authorized Issuer</p>
+              <p class="cert__date">Issued: Nov 17, 2025</p>
+              <a href="https://coursera.org/share/c5650c2070cfa971772cc958177ef531" target="_blank" class="cert__link">Verify Credential →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="client" id="clients">
       <div class="row">
-        <h2>Clients</h2>
+        <h2>Tools & Technologies</h2>
         <div class="client__logos">
           <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
+          <img src="./images/Excel.png" class="client__logo" alt="Company 2" />
+          <img src="./images/PowerBI.png" class="client__logo" alt="Company 3" />
+          <img src="./images/SQL.png" class="client__logo" alt="Company 1" />
+          <img src="./images/Python.png" class="client__logo" alt="Company 1" />
+          <img src="./images/chatGPT.png" class="client__logo" alt="Company 1" />
         </div>
       </div>
     </section>
 
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              I am an IT graduate and aspiring Data Analyst 
-              passionate about transforming complex data into actionable 
-              business insights using Power BI, SQL, and Excel.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ***** Contact ***** -->
@@ -212,18 +273,20 @@
       <h2>Get in Touch</h2>
       <div class="contact__info">
         <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
+            I'm always open to discussing data projects,
+            visualization challenges, or entry-level opportunities in Data Analytics.
+            Whether you have a question or just want to connect, feel free to drop me a message!
         </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        
+        <div class="contact__buttons">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jemico.dalangin@gmail.com" target="_blank" class="btn">jemico.dalangin@gmail.com</a> 
+            <a href="viber://chat?number=%2B639542691186" class="btn">+63 954 269 1186</a>
+        </div>
       </div>
     </div>
   </section>
+
+  
 
   <!-- ***** Footer ***** -->
 
@@ -231,44 +294,43 @@
     <div class="row">
       <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+         <li class="footer__social-link-item">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jemico.dalangin@gmail.com" title="Link to Codepen Profile">
+            <img src="./images/gmail.png" class="footer__social-image" alt="Codepen">
+          </a>
+        </li>
+         <li class="footer__social-link-item">
+          <a href= "https://www.linkedin.com/in/jemico-dalangin-955b60288/">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
+          <a href="https://github.com/JCoquillaD" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          <a href="https://web.facebook.com/jemicocoquilladalanginjcd" title="Link to Facebook Profile">
+            <img src="./images/facebook.png" class="footer__social-image" alt="Twitter">
           </a>
         </li>
       </ul>
 
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2026 - Developed & Maintained by **Jemico "Jc" Dalangin**</a>.
       </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
+      
     </div>
   </footer>
 
   <a href="#top" class="back-to-top" title="Back to Top">
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
+  <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
   <script src="./index.js"></script>
 </body>
 
