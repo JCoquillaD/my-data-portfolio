@@ -14,52 +14,58 @@
   <meta name="keywords" content="Power BI, DAX, SQL, Data Analytics," />
   <link rel="stylesheet" href="index.css" />
 </head>
-
+<style>
+  * { background-color: #f5f5f5 !important; color: #000 !important; }
+</style>
 <body>
 
   <!-- ***** Header ***** -->
-  <header class="header" role="banner" id="top" style="height: auto; min-height: auto; padding-bottom: 2rem;">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"> <a href="#about" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#certificate" class="nav__link">Certificates</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Tools</a></li>
-          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="header" role="banner" id="top">
+      <div class="row">
+        <nav class="nav" role="navigation">
+            <ul class="nav__items">
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="#certificate" class="nav__link">Certificates</a></li>
+                <li class="nav__item"><a href="#clients" class="nav__link">Tools</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
+          <section class="about" id="about" style="padding: 2rem 0;">
+                  <div class="row" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    
+                    
+                    
+                    <div class="section__header" style="text-align: left; margin-bottom: 30px;">
+                        <h2 class="section__title" style="text-align: left;">About Me</h2>
+                    </div>
 
+                    <div class="about__grid" style="display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 4rem; align-items: start;">
+                      
+                      <div class="about__text" style="width: 100%;">
+                        <p style="margin: 0 0 25px 0; line-height: 1.8; font-size: 16px; text-align: justify; color: #e0e0e0;">
+                              I am an aspiring Data Analyst with experience in building management systems and operational data reporting. 
+                              I specialize in using Power BI, SQL, and Excel to transform raw data into clear insights and dashboards that 
+                              support decision-making and operational improvements. I have hands-on experience analyzing system logs, 
+                              monitoring performance metrics, and generating reports that help identify trends and improve efficiency. 
+                              I am currently seeking opportunities as a Junior Data Analyst where I can apply my skills in data analysis, 
+                              visualization, and reporting to solve real-world business problems.
+                        </p>
+                        <a href="./Resume/JemicoDalangin_MyResume.pdf" class="btn" style="padding: 12px 30px; display: inline-block;">My Resume</a>
+                      </div>
 
-<section class="about" id="about">
-    <div class="row">
-      <h2>About Me</h2>
-      <div class="about__content">
-        
-        <div class="about__photo-container">
-            <img class="about__photo" src="./images/MIKOOOO.png" alt="JC Dalangin" />
-            <div class="about__photo-overlay">
-                <span class="name">JC Dalangin</span>
-                <span class="role">Aspiring Data Analyst</span>
-            </div>
-        </div>
+                      <div class="about__photo-box" style="display: flex; justify-content: flex-end;">
+                          <div style="position: relative; width: 100%; max-width: 300px;">
+                              <img class="about__photo" src="./images/MIKOOOO.png" alt="JC" 
+                                  style="width: 100%; border-radius: 12px; display: block; height: auto;" />
+                          </div>
+                      </div>
 
-        <div class="about__text">
-          <p>
-                I am an IT graduate and an aspiring Data Analyst passionate about uncovering actionable insights within complex datasets. 
-                With expertise in Power BI, SQL, and Excel, I specialize in transforming raw data into clear, visual narratives that drive smarter business decisions. 
-                I thrive at the intersection of technology and strategy, always aiming to help organizations leverage their data for maximum efficiency and impact.
-
-          </p>
-          <a href="./Resume/JemicoDalangin_MyResume.pdf" class="btn">My Resume</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
+                    </div>
+                  </div>
+              </section>
 
   <main role="main">
 
@@ -67,196 +73,250 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+         <div class="section__header" style="text-align: center; margin-bottom: 30px;">
+            <h2 class="section__title">Featured Projects</h2>
+            <p class="section__subtitle" style="color: #ccc; max-width: 600px; margin: 0 auto;">
+                Here are some of my key data analysis projects used to drive business insights and decisions.
+            </p>
+          </div>
         <div class="work__boxes">
 
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-               <h3>Elevator Systems: Performance & Reliability Tracker</h3>
-                    <p>
-                      An end-to-end operational dashboard that monitors real-time elevator availability, traffic patterns, and wait-time anomalies. 
-                      Developed to identify mechanical hotspots and optimize maintenance scheduling in high-rise building management.
-                    </p>
-                      <ul class="work__list">
-                        <li>Power BI</li>
-                        <li>DAX Formulas</li>
-                        <li>Data Cleaning</li>
-                        <li>BMS Operations</li>
+          <div class="work__box" style="display: flex; align-items: flex-start; gap: 3rem; margin-bottom: 2.5rem;">
+              <div class="work__text" style="flex: 1; display: flex; flex-direction: column;">
+                  <h3 class="work__title" style="font-size: 2rem; margin-bottom: 15px; line-height: 1.2;">
+                      Elevator Systems: Performance & Reliability Tracker
+                  </h3>
+                  <h4 style="font-size: 15px; font-weight: 500; color: #ccc; line-height: 1.8; margin-bottom: 0;">
+                      <span style="color: #ff4d4d;">●</span> <strong>Goal:</strong> Improve elevator efficiency and reduce building congestion.<br>
+                      <span style="color: #ff4d4d;">●</span> <strong>Objective:</strong> Identify peak usage, idle time, and overloaded elevators.
+                  </h4>
+                  <p style="font-size: 15px; line-height: 1.8; color: #e0e0e0; margin-top: 5px; margin-bottom: 20px;">
+                      An end-to-end operational dashboard that monitors real-time elevator availability and traffic patterns. 
+                      <strong>Impact:</strong> Automated the ETL pipeline to consolidate monthly logs, reducing manual data preparation time by 
+                      <span style="color: #ff4d4d; font-weight: bold;">100%</span>.
+                  </p>
+                  <div class="analysis__content" style="border-left: 2px solid #ff4d4d; padding-left: 15px; margin-top: 10px;">
+                      <h4 style="color: #ff4d4d; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Key Insights & Recommendations</h4>
+                      <ul style="list-style: none; padding: 0; color: #ccc; font-size: 14px; line-height: 2;">
+                          <li style="margin-bottom: 8px;">📊 <strong>Insight:</strong> Reduced average wait time by 15% during peak hours (8AM & 5PM).</li>
+                          <li style="margin-bottom: 8px;">💡 <strong>Recommendation:</strong> Reschedule maintenance to off-peak hours (10PM-4AM) to maximize availability.</li>
+                          <li>📉 <strong>Result:</strong> Optimized idle cycles can potentially reduce energy consumption.</li>
                       </ul>
-              <br>
-              <div class="work__links">
-                <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDdjN2M4ZDAtZGRjZi00YWU0LWI2ZTYtN2JlZDI4ZjY0MGE1IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">
-                  Visit Site &rarr;
-                </a>
-                <a href="https://github.com/JCoquillaD/Elevator-System-Perfomance-Dashboard---Realtime-data" target="_blank" class="github-link">
-                  <img src="./images/github.svg" alt="GitHub" class="work__code">
-                </a>
+                  </div>
               </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/High_Rise Operational Analytics Elevator Performance and Downtime Tracker.png" 
-                  class="work__image" 
-                  alt="Project 1" 
-                  onclick="openModal(this)" /> 
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-               <h3>The Pizza Hub: Sales & Trends Tracker</h3>
-                    <p>
-                      A comprehensive sales dashboard that tracks daily trends, peak hours, and best-selling products. 
-                      Used this to identify operational bottlenecks and revenue growth opportunities.
-                    </p>
-                      <ul class="work__list">
-                        <li>Power BI</li>
-                        <li>DAX Formulas</li>
-                        <li>Data Cleaning</li>
-                        <li>Sales Forecasting</li>
-                      </ul>
-              <br>
-              <div class="work__links">
-                <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiOGE3ZDliNjQtMjZjZC00MzkwLTg4MWYtYjhhYmQxZTk5OThmIiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">
-                  Visit Site &rarr;
-                </a>
-                <a href="https://github.com/JCoquillaD/Pizza_Sales_Revenue_Analysis" target="_blank" class="github-link">
-                  <img src="./images/github.svg" alt="GitHub" class="work__code">
-                </a>
+              <div class="work__right-side" style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">                
+                  <div class="work__image-box" style="width: 100%; margin-bottom: 20px;">
+                      <img src="./images/High_Rise Operational Analytics Elevator Performance and Downtime Tracker.png" 
+                          class="work__image" 
+                          style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); cursor: pointer;"
+                          onclick="openModal(this)" /> 
+                  </div>
+                  <div class="work__links" style="display: flex; align-items: center; gap: 20px;">
+                      <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiNDdjN2M4ZDAtZGRjZi00YWU0LWI2ZTYtN2JlZDI4ZjY0MGE1IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn" style="background: #ff4d4d; color: #fff; padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                          View Live Dashboard &rarr;
+                      <a href="https://github.com/JCoquillaD/Elevator-System-Perfomance-Dashboard---Realtime-data" target="_blank">
+                        <img src="./images/icons8-github-50.png" alt="GitHub" style="width: 25px; filter: invert(1);">
+                      </a>
+                  </div>
               </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/Pizza_Sales_Revenue_Analysis.png" 
-                  class="work__image" 
-                  alt="Project 1" 
-                  onclick="openModal(this)" /> 
-            </div>
           </div>
-
-          <div class="work__box">
-            <div class="work__text">
-               <h3>Plant_DTS: Global Sales & Profitability Analysisr</h3>
-                    <p>
-                      End-to-end Power BI sales analytics solution featuring dynamic metric switching (Sales, Qty, GP) via DAX, 
-                      time intelligence for YOY performance tracking, and automated data cleaning for regional profitability insights.
-                    </p>
-                      <ul class="work__list">
-                        <li>Power BI</li>
-                        <li>DAX Formulas</li>
-                        <li>Data Cleaning</li>
-                        <li>Sales Forecasting</li>
-                        <li>business-intelligence executive-dashboard</li>
-                      </ul>
-              <br>
-              <div class="work__links">
-                <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYWQxOTM3MGUtYmU5ZS00NGNhLWJhMTMtMmYzNWYyNzQyNjI5IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">
-                  Visit Site &rarr;
-                </a>
-                <a href="https://github.com/JCoquillaD/PLANT_DTS-Global-Sales-Profitability-Performance?tab=readme-ov-file" target="_blank" class="github-link">
-                  <img src="./images/github.svg" alt="GitHub" class="work__code">
-                </a>
-              </div>
+                                  
+         <div class="work__box" style="display: flex; align-items: flex-start; gap: 3rem; margin-bottom: 5rem;">
+            <div class="work__text" style="flex: 1; display: flex; flex-direction: column;">
+                <h3 class="work__title" style="font-size: 2rem; margin-bottom: 15px; line-height: 1.2;">
+                    The Pizza Hub: Sales & Trends Tracker
+                </h3>
+                <h4 style="font-size: 15px; font-weight: 500; color: #ccc; line-height: 1.8; margin-bottom: 0;">
+                    <span style="color: #ff4d4d;">●</span> <strong>Goal:</strong> Optimize kitchen efficiency and revenue growth.<br>
+                    <span style="color: #ff4d4d;">●</span> <strong>Objective:</strong> Track hourly peak sales, daily trends, and product category performance.
+                </h4>
+                <p style="font-size: 15px; line-height: 1.8; color: #e0e0e0; margin-top: 5px; margin-bottom: 20px;">
+                    A comprehensive sales dashboard built to monitor business health through transaction data. 
+                    <strong>Impact:</strong> Improved inventory forecasting and <span style="color: #ff4d4d; font-weight: bold;">optimized staff scheduling</span>.
+                </p>
+                <div class="analysis__content" style="border-left: 2px solid #ff4d4d; padding-left: 15px; margin-top: 10px;">
+                    <h4 style="color: #ff4d4d; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Key Insights</h4>
+                    <ul style="list-style: none; padding: 0; color: #ccc; font-size: 14px; line-height: 2;">
+                        <li style="margin-bottom: 8px;">📊 <strong>Trend:</strong> Sales peaked in <strong>July</strong>, with heavy traffic during <strong>lunch, dinner, and Fridays</strong>.</li>
+                        <li>🍕 <strong>Preference:</strong> <strong>Classic</strong> variants emerged as the top-selling category, accounting for the bulk of revenue.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="work__image-box">
-              <img src="./images/Plant_Co. Sales Performance 2023.png" 
-                  class="work__image" 
-                  alt="Project 1" 
-                  onclick="openModal(this)" /> 
+            <div class="work__right-side" style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">         
+                <div class="work__image-box" style="width: 100%; margin-bottom: 20px;">
+                    <img src="./images/Pizza_Sales_Revenue_Analysis.png" 
+                        class="work__image" 
+                        style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); cursor: pointer;"
+                        onclick="openModal(this)" /> 
+                </div>
+                <div class="work__links" style="display: flex; align-items: center; gap: 20px;">
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiOGE3ZDliNjQtMjZjZC00MzkwLTg4MWYtYjhhYmQxZTk5OThmIiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn" style="background: #ff4d4d; color: #fff; padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                        Visit Live Dashboard &rarr;
+                    </a>
+                    <a href="https://github.com/JCoquillaD" target="_blank" style="opacity: 0.8;">
+                        <img src="./images/icons8-github-50.png" alt="GitHub" style="width: 25px; filter: invert(1);">
+                    </a>
+                </div>
             </div>
-          </div>
+        </div>
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Maven Coffee Operational Analysis</h3>
-              <p>
-                An operational dashboard designed to track transaction patterns, identify peak hours, 
-                and analyze product category performance. Used heat maps and time-series analysis 
-                to provide actionable insights for staff scheduling and inventory management.
+        <div class="work__box" style="display: flex; align-items: flex-start; gap: 3rem; margin-bottom: 5rem;">
+          <div class="work__text" style="flex: 1; display: flex; flex-direction: column;">  
+              <h3 class="work__title" style="font-size: 2rem; margin-bottom: 15px; line-height: 1.2;">
+                  Plant_DTS: Global Sales & Profitability Analysis
+              </h3>
+              <h4 style="font-size: 15px; font-weight: 500; color: #ccc; line-height: 1.8; margin-bottom: 0;">
+                  <span style="color: #ff4d4d;">●</span> <strong>Goal:</strong> Optimize regional profitability and identify market growth opportunities.<br>
+                  <span style="color: #ff4d4d;">●</span> <strong>Objective:</strong> Analyze sales vs. expenses and track YOY performance metrics.
+              </h4>
+              <p style="font-size: 15px; line-height: 1.8; color: #e0e0e0; margin-top: 5px; margin-bottom: 20px;">
+                  End-to-end Power BI sales analytics solution featuring dynamic metric switching (Sales, Qty, GP) via DAX and time intelligence. 
+                  <strong>Impact:</strong> Automated data cleaning and regional reporting, providing clear visibility into high-margin products vs. high-expense areas.
               </p>
-              <ul class="work__list">
-                <li>Power BI</li>
-                <li>Data Modeling</li>
-                <li>Time-Series Analysis</li>
-                <li>Heat Map Design</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://app.powerbi.com/view?r=eyJrIjoiNjViZDNmMGQtNjhjNi00NmE3LThlNzgtMzM3ZWNhOTQ3ZTE5IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">Visit Site &rarr;</a>
-                
-                <a href="https://github.com/JCoquillaD/Coffee_Operations_Analysis_Report?tab=readme-ov-file" target="_blank" class="github-link">
-                  <img src="./images/github.svg" alt="GitHub" class="work__code">
-                </a>
-            </div>
-          </div>
-                <div class="work__image-box">
-              <img src="./images/Coffee_Operations_Analysis_Report.png" 
-                  class="work__image" 
-                  alt="Project 1" 
-                  onclick="openModal(this)" /> 
-            </div>
+              <div class="analysis__content" style="border-left: 2px solid #ff4d4d; padding-left: 15px; margin-top: 10px;">
+                  <h4 style="color: #ff4d4d; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Key Insights (As of 2023)</h4>
+                  <ul style="list-style: none; padding: 0; color: #ccc; font-size: 14px; line-height: 1.8;">
+                      <li style="margin-bottom: 8px;">📉 <strong>Critical Market:</strong> China recorded the lowest sales performance at <strong>-760.40k</strong>, indicating a need for market intervention.</li>
+                      <li style="margin-bottom: 8px;">📊 <strong>YOY Trend:</strong> Current YTD sales are lower compared to the prior year, suggesting a dip in market demand or increased competition.</li>
+                      <li style="margin-bottom: 8px;">💰 <strong>Profitability:</strong> While <strong>GP% is higher</strong>, actual Sales are lower. This implies strong product value but indicates that <strong>operational expenses</strong> need strict observation.</li>
+                      <li>💡 <strong>Action:</strong> Low sales volume may be caused by weak distribution or low awareness; a separate expense audit is recommended to protect net profit.</li>
+                  </ul>
               </div>
+          </div>
+          <div class="work__right-side" style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">
+              <div class="work__image-box" style="width: 100%; margin-bottom: 20px;">
+                  <img src="./images/Plant_Co. Sales Performance 2023.png" 
+                      class="work__image" 
+                      style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); cursor: pointer;"
+                      onclick="openModal(this)" /> 
+              </div>
+              <div class="work__links" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="https://app.fabric.microsoft.com/view?r=eyJrIjoiYWQxOTM3MGUtYmU5ZS00NGNhLWJhMTMtMmYzNWYyNzQyNjI5IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn" style="background: #ff4d4d; color: #fff; padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                      Visit Live Dashboard &rarr;
+                  </a>
+                  <a href="https://github.com/JCoquillaD/PLANT_DTS-Global-Sales-Profitability-Performance?tab=readme-ov-file" target="_blank" style="opacity: 0.8;">
+                      <img src="./images/icons8-github-50.png" alt="GitHub" style="width: 25px; filter: invert(1);">
+                  </a>
+              </div>
+          </div>
+        </div>
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Global Video Game Market Trends</h3>
-              <p>
-                An executive-level dashboard analyzing gaming trends from 1980 to 2015+. 
-                It features advanced DAX measures to track industry growth, a pop-out slicer menu 
-                for seamless navigation, and hierarchy filtering by Decade, Genre, and Console.
+         <div class="work__box" style="display: flex; align-items: flex-start; gap: 3rem; margin-bottom: 5rem;">  
+          <div class="work__text" style="flex: 1; display: flex; flex-direction: column;">
+              <h3 class="work__title" style="font-size: 2rem; margin-bottom: 15px; line-height: 1.2;">
+                  Maven Coffee Operational Analysis
+              </h3>
+              <h4 style="font-size: 15px; font-weight: 500; color: #ccc; line-height: 1.8; margin-bottom: 0;">
+                  <span style="color: #ff4d4d;">●</span> <strong>Goal:</strong> Optimize shop operations and inventory management.<br>
+                  <span style="color: #ff4d4d;">●</span> <strong>Objective:</strong> Identify peak transaction hours and top-performing product categories.
+              </h4>
+              <p style="font-size: 15px; line-height: 1.8; color: #e0e0e0; margin-top: 5px; margin-bottom: 20px;">
+                  An operational dashboard designed to track transaction patterns using heat maps and time-series analysis. 
+                  <strong>Impact:</strong> Provided actionable insights for staff scheduling during peak windows and refined inventory stocking.
               </p>
-              <ul class="work__list">
-                <li>Power BI</li>
-                <li>Advanced DAX</li>
-                <li>Market Trend Analysis</li>
-                <li>UI/UX Dashboard Design</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://app.powerbi.com/view?r=eyJrIjoiMjM4ZDM1NDItNWIxNC00Mzc1LTk4OWEtN2I1Y2ZjZWQ4MGVkIiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn">Visit Site &rarr;</a>
-                <a href="https://github.com/JCoquillaD/Global_Video_Game_Market_Trends?tab=readme-ov-file" target="_blank" class="github-link">
-                  <img src="./images/github.svg" alt="GitHub" class="work__code">
-                </a>
+              <div class="analysis__content" style="border-left: 2px solid #ff4d4d; padding-left: 15px; margin-top: 10px;">
+                  <h4 style="color: #ff4d4d; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Key Insights</h4>
+                  <ul style="list-style: none; padding: 0; color: #ccc; font-size: 14px; line-height: 1.8;">
+                      <li style="margin-bottom: 8px;">📈 <strong>Revenue Growth:</strong> This month achieved a <strong>0.31% higher total revenue</strong> compared to last month, showing steady growth.</li>
+                      <li style="margin-bottom: 8px;">🌅 <strong>Peak Performance:</strong> Data reveals that <strong>weekly mornings</strong> see the highest volume of orders, primarily driven by coffee products.</li>
+                      <li>☕ <strong>Profitability:</strong> Coffee remains the most profitable and productive category, maintaining strong market performance.</li>
+                  </ul>
               </div>
-            </div>
-              <div class="work__image-box">
-              <img src="./images/Global_Video_Game_Market_Trends.png" 
-                  class="work__image" 
-                  alt="Project 1" 
-                  onclick="openModal(this)" /> 
-            </div>
           </div>
+
+          <div class="work__right-side" style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">
+              <div class="work__image-box" style="width: 100%; margin-bottom: 20px;">
+                  <img src="./images/Coffee_Operations_Analysis_Report.png" 
+                      class="work__image" 
+                      style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); cursor: pointer;"
+                      onclick="openModal(this)" /> 
+              </div>
+
+              <div class="work__links" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="https://app.powerbi.com/view?r=eyJrIjoiNjViZDNmMGQtNjhjNi00NmE3LThlNzgtMzM3ZWNhOTQ3ZTE5IiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" target="_blank" class="btn" style="background: #ff4d4d; color: #fff; padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                      Visit Live Dashboard &rarr;
+                  </a>
+                  <a href="https://github.com/JCoquillaD/Coffee_Operations_Analysis_Report?tab=readme-ov-file" target="_blank" style="opacity: 0.8;">
+                      <img src="./images/icons8-github-50.png" alt="GitHub" style="width: 25px; filter: invert(1);">
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="work__box" style="display: flex; align-items: flex-start; gap: 3rem; margin-bottom: 5rem;">  
+          <div class="work__text" style="flex: 1; display: flex; flex-direction: column;">
+              <h3 class="work__title" style="font-size: 2rem; margin-bottom: 15px; line-height: 1.2;">
+                  Global Video Games Market Trends
+              </h3>
+              <h4 style="font-size: 15px; font-weight: 500; color: #ccc; line-height: 1.8; margin-bottom: 0;">
+                  <span style="color: #ff4d4d;">●</span> <strong>Goal:</strong> Analyze historical gaming data to identify market peaks and regional preferences.<br>
+                  <span style="color: #ff4d4d;">●</span> <strong>Objective:</strong> Track sales growth trends and platform dominance across different genres.
+              </h4>
+              <p style="font-size: 15px; line-height: 1.8; color: #e0e0e0; margin-top: 5px; margin-bottom: 20px;">
+                  An end-to-end Power BI dashboard that monitors global sales performance and regional market share. 
+                  <strong>Impact:</strong> Identified key platform leaders and a 2.54% sales growth margin for market strategic planning.
+              </p>
+              <div class="analysis__content" style="border-left: 2px solid #ff4d4d; padding-left: 15px; margin-top: 10px;">
+                  <h4 style="color: #ff4d4d; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Key Insights</h4>
+                  <ul style="list-style: none; padding: 0; color: #ccc; font-size: 14px; line-height: 1.8;">
+                      <li style="margin-bottom: 8px;">📈 <strong>Peak Performance:</strong> Year 2010 recorded the highest sales of all time in the industry.</li>
+                      <li style="margin-bottom: 8px;">🌎 <strong>Regional Leader:</strong> North America remains the top region for overall game consumption.</li>
+                      <li style="margin-bottom: 8px;">📊 <strong>Growth Metric:</strong> Sales performance improved by <strong>2.54%</strong> compared to Last Year (LY).</li>
+                      <li style="margin-bottom: 8px;">🎮 <strong>Market King:</strong> GTA V leads as the top-selling game title globally.</li>
+                      <li>🔫 <strong>Genre Niche:</strong> Xbox and PS3 dominated the market share for the Shooter genre.</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="work__right-side" style="flex: 1; display: flex; flex-direction: column; align-items: flex-end;">
+              <div class="work__image-box" style="width: 100%; margin-bottom: 20px;">
+                  <img src="./images/Global_Video_Game_Market_Trends.png" 
+                      class="work__image" 
+                      style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 15px 35px rgba(0,0,0,0.6); cursor: pointer;"
+                      onclick="openModal(this)" /> 
+              </div>
+
+              <div class="https://app.powerbi.com/view?r=eyJrIjoiMjM4ZDM1NDItNWIxNC00Mzc1LTk4OWEtN2I1Y2ZjZWQ4MGVkIiwidCI6Ijg2Yzk5YjhjLTc1MzMtNDVlMC1hYmUxLWFmZDE2NTBiYzdjOCIsImMiOjEwfQ%3D%3D" style="display: flex; align-items: center; gap: 20px;">
+                  <a href="https://app.powerbi.com/view?r=YOUR_GAMES_DASHBOARD_LINK" target="_blank" class="btn" style="background: #ff4d4d; color: #fff; padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 600; font-size: 14px;">
+                      Visit Live Dashboard &rarr;
+                  </a>
+                  <a href="https://github.com/JCoquillaD/Global_Video_Game_Market_Trends" target="_blank" style="opacity: 0.8;">
+                      <img src="./images/icons8-github-50.png" alt="GitHub" style="width: 25px; filter: invert(1);">
+                  </a>
+              </div>
+          </div>
+      </div>
+
         </div>
       </div>
     </section>
 
   <section class="certs section" id="certificate">
-  <div class="row">
+      <div class="row">
         <h2>Certificates</h2> <div class="certs__container container grid">
           <div class="cert__card">
-            <div class="cert__img-box">
-              <img src="./images/CertificateExcel.png" alt="Preparing Data with Excel Cert" class="cert__img" onclick="openModal(this)">
-              <div class="cert__hover">
-                <span>View Certificate</span>
+              <div class="cert__img-box">
+                <img src="./images/CertificateExcel.png" class="cert__img" onclick="openModal(this)">
+                <div class="cert__hover">
+                </div>
+              </div>
+              
+              <div class="cert__info">
+                <h5>Preparing Data for Analysis with Microsoft Excel</h5>
+                <p>Microsoft | Coursera | Authorized Issuer</p>
+                <p class="cert__date">Issued: Aug 27, 2025</p>
+                <a href="https://coursera.org/share/c5650c2070cfa971772cc958177ef531" target="_blank" class="cert__link">Verify Credential →</a>
               </div>
             </div>
-            <div class="cert__info">
-              <h3>Preparing Data for Analysis with Microsoft Excel</h3>
-              <p>Microsoft | Coursera | Authorized Issuer</p>
-              <p class="cert__date">Issued: Aug 27, 2025</p>
-              <a href="https://coursera.org/share/8aee10e1ca5b108cdad5da2c475b47ea" target="_blank" class="cert__link">Verify Credential →</a>
-            </div>
-          </div>
 
           <div class="cert__card">
             <div class="cert__img-box">
               <img src="./images/HarnessingPowerBI.png" alt="Harnessing Data with Power BI Cert" class="cert__img" onclick="openModal(this)">
               <div class="cert__hover">
-                <span>View Certificate</span>
               </div>
             </div>
             <div class="cert__info">
-              <h3>Harnessing the Power of Data with Power BI</h3>
+              <h5>Harnessing the Power of Data with Power BI</h5>
               <p>Microsoft | Coursera | Authorized Issuer</p>
               <p class="cert__date">Issued: Oct 9, 2025</p>
               <a href="https://coursera.org/share/8b499381964b6774fa26ab8b5ccdb96b" target="_blank" class="cert__link">Verify Credential →</a>
@@ -267,19 +327,18 @@
             <div class="cert__img-box">
               <img src="./images/ETLPowerBI.png" alt="ETL Data with Power BI Cert" class="cert__img" onclick="openModal(this)">
               <div class="cert__hover">
-                <span>View Certificate</span>
               </div>
             </div>
             <div class="cert__info">
-              <h3>Extract, Transform and Load Data in Power BI</h3>
+              <h5>Extract, Transform and Load Data in Power BI</h5>
               <p>Microsoft | Coursera | Authorized Issuer</p>
               <p class="cert__date">Issued: Nov 17, 2025</p>
-              <a href="https://coursera.org/share/c5650c2070cfa971772cc958177ef531" target="_blank" class="cert__link">Verify Credential →</a>
+              <a href="https://coursera.org/share/8aee10e1ca5b108cdad5da2c475b47ea" target="_blank" class="cert__link">Verify Credential →</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+  </section>
 
     <section class="client" id="clients">
       <div class="row">
@@ -332,12 +391,12 @@
         </li>
          <li class="footer__social-link-item">
           <a href= "https://www.linkedin.com/in/jemico-dalangin-955b60288/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+            <img src="./images/linkedin.png" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
         <li class="footer__social-link-item">
           <a href="https://github.com/JCoquillaD" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+            <img src="./images/icons8-github-50.png" class="footer__social-image" alt="Github">
           </a>
         </li>
         <li class="footer__social-link-item">
